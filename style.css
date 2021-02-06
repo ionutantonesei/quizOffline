@@ -1,0 +1,107 @@
+*{
+    margin:0;
+}
+:root{
+    --normal: white;
+    --corect: green;
+    --gresit: red;
+}
+body{
+    background-color: var(--normal);
+}
+h1{
+    text-align: center;
+}
+.quiz-container{
+    position: absolute;
+    top: 10vh;
+    left: 10vw;
+    width: 80vw;
+    height: 80vh;
+}
+.intrebare-container{
+    position: absolute;
+    text-align: center;
+    top: 1%;
+    width: 100%;
+    font-family: 'Lato', sans-serif;
+    font-size: 2.5vw;
+}
+.raspuns-container{
+    position: absolute;
+    top: 15%;
+    left: 10%;
+    width: 80%;
+    height: 80%;
+    background-color: #7FFF00;
+    box-shadow: 10px 5px 5px gray;
+}
+.raspunsuri{
+    position: absolute;
+    top: 0%;
+    left: 15%;
+    width: 70%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.buton-start{
+    display: inline;
+    position: absolute;
+    left: 30%;
+    top: 40%;
+    height: 15%;
+    width: 40%;
+    z-index:3;
+}
+.raspuns{
+    display:none;
+    width: 40%;
+    height: 15%;
+    font-size: 2vw;
+    background-color: darkolivegreen;
+    border-radius: 24px 20px;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+}
+.raspuns:hover{
+    background-color: darkorange;
+}
+.urmatorul{
+    display: none;
+    position: absolute;
+    top:85%;
+    left:80%;
+    width: 10vw;
+    height: 6vh;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5vw;
+    background-color: darkolivegreen;
+    border-radius: 24px 20px;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+}
+.urmatorul:hover{
+    background-color: darkorange;
+}
+.anterior{
+    display: none;
+    position: absolute;
+    top:85%;
+    left:10%;
+    width: 10vw;
+    height: 6vh;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5vw;
+    background-color: darkolivegreen;
+    border-radius: 24px 20px;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+}
+.anterior:hover{
+    background-color: darkorange;
+}

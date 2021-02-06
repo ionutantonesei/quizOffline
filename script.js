@@ -4,8 +4,10 @@ const buton3 = document.getElementById('raspuns3');
 const buton4 = document.getElementById('raspuns4');
 const butonStart = document.getElementById('butonStart');
 const urmatorul = document.getElementById('urmatorul-buton');
-const anterior = document.getElementById('anterior-buton');
 const intrebareElement = document.getElementById('intrebare');
+const stergeButon = document.getElementById('sterge-buton');
+const clasamentButon = document.getElementById('butonScor');
+const pozitieElemente = document.getElementById('raspuns-container');
 let validareButon1 = 0;
 let validareButon2 = 0;
 let validareButon3 = 0;
@@ -13,7 +15,6 @@ let validareButon4 = 0;
 let i = 0;
 let corect = 0;
 let scor = 0;
-
 
 let intrebari = [{
     intrebare : 'Cat face 2+2?',
@@ -29,13 +30,18 @@ let intrebari = [{
 },
 {
     intrebare : 'In ce an a avut loc Razboiul de independenta din Romania?',
-    raspuns: [['1945' , false],['1989' , false],['1918' , false],['1866' , true]]
+    raspuns: [['1945' , false],['1989' , false],['1918' , false],['1877' , true]]
+},
+{
+    intrebare : 'Care tari se afla in balcani?',
+    raspuns: [['Romania' , true],['Grecia' , true],['Ucraina' , false],['Belarus' , false]]
 }]
 
 butonStart.addEventListener('click',function start(){
     butonStart.style.display = 'none';
+    clasamentButon.style.display = 'none';
     urmatorul.style.display = 'flex';
-    anterior.style.display = 'flex';
+    stergeButon.style.display = 'flex';
     buton1.style.display = 'inline';
     buton2.style.display = 'inline';
     buton3.style.display = 'inline';
@@ -120,8 +126,11 @@ urmatorul.addEventListener('click',()=>{
     i+=1;
     if (i>=intrebari.length){
         i = 0;
+        scorSalvat = scor;
+        numeSalvat = window.prompt('Introduceti numele dvs','utilizator')
+        localStorage.setItem(numeSalvat,scorSalvat);
         alert(`Scorul este: ${scor}`);
-        corect = 0;
+        scor = 0;
     }
     intrebareElement.innerText = intrebari[i].intrebare;
     buton1.innerText = intrebari[i].raspuns[0][0];
@@ -129,3 +138,26 @@ urmatorul.addEventListener('click',()=>{
     buton3.innerText = intrebari[i].raspuns[2][0];
     buton4.innerText = intrebari[i].raspuns[3][0];
 })
+
+stergeButon.addEventListener('click',()=>{
+    buton1.style.backgroundColor = 'darkolivegreen';
+    buton2.style.backgroundColor = 'darkolivegreen';
+    buton3.style.backgroundColor = 'darkolivegreen';
+    buton4.style.backgroundColor = 'darkolivegreen';
+    validareButon1 = 0;
+    validareButon2 = 0;
+    validareButon3 = 0;
+    validareButon4 = 0;
+})
+
+clasamentButon.addEventListener('click',()=>{
+    butonStart.style.display = 'none';
+    clasamentButon.style.display = 'none';
+    for (let i = 0;i<localStorage.length;i++){
+    let element = document.createElement('p');
+    element.style.margin = '2vw';
+    element.innerText = `Scorul lui ${localStorage.key(i)} a fost: ${localStorage.getItem(localStorage.key(i))}`;
+    pozitieElemente.appendChild(element);
+    }
+})
+

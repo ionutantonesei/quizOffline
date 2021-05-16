@@ -58,60 +58,40 @@ buton1.addEventListener('click',()=>{
         buton1.style.backgroundColor = 'darkorange';
         validareButon1 = 1;
     }
-    if (validareButon1 == 1 && intrebari[i].raspuns[0][1] == true){
-        corect = 1;
+    if (validareButon1 == 1 && data[i].raspunsuri[0][1] == 1){
+        corect= 1;
     }
-    else if (validareButon1 == 1 && intrebari[i].raspuns[0][1] == false){
-        corect = -1;
-    }
-    else {
-        corect = corect;
-    }
+    else if(validareButon1 == 1 && data[i].raspunsuri[0][1] == null && corect == 1) corect = 0;
 });
 buton2.addEventListener('click',()=>{
     if (validareButon2 == 0){
         buton2.style.backgroundColor = 'darkorange';
         validareButon2 = 1;
     }
-    if (validareButon2 == 1 && intrebari[i].raspuns[1][1] == true){
-        corect = 1;
+    if (validareButon2 == 1 && data[i].raspunsuri[1][1] == 1){
+        corect= 1;
     }
-    else if (validareButon2 == 1 && intrebari[i].raspuns[1][1] == false){
-        corect = -1;
-    }
-    else {
-        corect = corect;
-    }
+    else if(validareButon2 == 1 && data[i].raspunsuri[1][1] == null && corect == 1) corect = 0;
 });
 buton3.addEventListener('click',()=>{
     if (validareButon3 == 0){
         buton3.style.backgroundColor = 'darkorange';
         validareButon3 = 1;
     }
-    if (validareButon3 == 1 && intrebari[i].raspuns[2][1] == true){
-        corect = 1;
+    if (validareButon3 == 1 && data[i].raspunsuri[2][1] == 1){
+        corect= 1;
     }
-    else if (validareButon3 == 1 && intrebari[i].raspuns[2][1] == false){
-        corect = -1;
-    }
-    else {
-        corect = corect;
-    }
+    else if(validareButon3 == 1 && data[i].raspunsuri[2][1] == null && corect == 1) corect = 0;
 });
 buton4.addEventListener('click',()=>{
     if (validareButon4 == 0){
         buton4.style.backgroundColor = 'darkorange';
         validareButon4 = 1;
     }
-    if (validareButon4 == 1 && intrebari[i].raspuns[3][1] == true){
-        corect = 1;
+    if (validareButon4 == 1 && data[i].raspunsuri[3][1] == 1){
+        corect= 1;
     }
-    else if (validareButon4 == 1 && intrebari[i].raspuns[3][1] == false){
-        corect = -1;
-    }
-    else {
-        corect = corect;
-    }
+    else if(validareButon4 == 1 && data[i].raspunsuri[3][1] == null && corect == 1) corect = 0;
 });
 urmatorul.addEventListener('click',()=>{
     validareButon1 = 0;

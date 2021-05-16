@@ -110,7 +110,6 @@ urmatorul.addEventListener('click',()=>{
         numeSalvat = window.prompt('Introduceti numele dvs','utilizator')
         localStorage.setItem(numeSalvat,scorSalvat);
         alert(`Scorul este: ${scor}`);
-        scor = 0;
     }
     intrebareElement.innerText = intrebari[i].intrebare;
     buton1.innerText = intrebari[i].raspuns[0][0];

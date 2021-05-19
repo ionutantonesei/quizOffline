@@ -61,37 +61,37 @@ buton1.addEventListener('click',()=>{
     if (validareButon1 == 1 && intrebari[i].raspuns[0][1] == 1){
         corect= 1;
     }
-    else if(validareButon1 == 1 && intrebari[i].raspunsuri[0][1] == null && corect == 1) corect = 0;
+    else if(validareButon1 == 1 && intrebari[i].raspuns[0][1] == null && corect == 1) corect = 0;
 });
 buton2.addEventListener('click',()=>{
     if (validareButon2 == 0){
         buton2.style.backgroundColor = 'darkorange';
         validareButon2 = 1;
     }
-    if (validareButon2 == 1 && intrebari[i].raspunsuri[1][1] == 1){
+    if (validareButon2 == 1 && intrebari[i].raspuns[1][1] == 1){
         corect= 1;
     }
-    else if(validareButon2 == 1 && intrebari[i].raspunsuri[1][1] == null && corect == 1) corect = 0;
+    else if(validareButon2 == 1 && intrebari[i].raspuns[1][1] == null && corect == 1) corect = 0;
 });
 buton3.addEventListener('click',()=>{
     if (validareButon3 == 0){
         buton3.style.backgroundColor = 'darkorange';
         validareButon3 = 1;
     }
-    if (validareButon3 == 1 && intrebari[i].raspunsuri[2][1] == 1){
+    if (validareButon3 == 1 && intrebari[i].raspuns[2][1] == 1){
         corect= 1;
     }
-    else if(validareButon3 == 1 && intrebari[i].raspunsuri[2][1] == null && corect == 1) corect = 0;
+    else if(validareButon3 == 1 && intrebari[i].raspuns[2][1] == null && corect == 1) corect = 0;
 });
 buton4.addEventListener('click',()=>{
     if (validareButon4 == 0){
         buton4.style.backgroundColor = 'darkorange';
         validareButon4 = 1;
     }
-    if (validareButon4 == 1 && intrebari[i].raspunsuri[3][1] == 1){
+    if (validareButon4 == 1 && intrebari[i].raspuns[3][1] == 1){
         corect= 1;
     }
-    else if(validareButon4 == 1 && intrebari[i].raspunsuri[3][1] == null && corect == 1) corect = 0;
+    else if(validareButon4 == 1 && intrebari[i].raspuns[3][1] == null && corect == 1) corect = 0;
 });
 urmatorul.addEventListener('click',()=>{
     validareButon1 = 0;
@@ -110,6 +110,7 @@ urmatorul.addEventListener('click',()=>{
         numeSalvat = window.prompt('Introduceti numele dvs','utilizator')
         localStorage.setItem(numeSalvat,scorSalvat);
         alert(`Scorul este: ${scor}`);
+        scor = 0;
     }
     intrebareElement.innerText = intrebari[i].intrebare;
     buton1.innerText = intrebari[i].raspuns[0][0];
